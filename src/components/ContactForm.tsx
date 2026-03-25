@@ -6,8 +6,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "@/hooks/use-toast";
 
 const services = [
-  "BGF-Assistent",
-  "Förder-Check",
+  "BGF-Held",
+  "FörderHeld",
   "Grundriss & BGF (Service)",
   "3D-Tour",
   "Immobilien-Website",
@@ -23,8 +23,19 @@ export function ContactForm() {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1000));
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("_subject", `Neue Kontaktanfrage von ${formData.get("name")}`);
+    formData.append("_template", "table");
+
+    try {
+      await fetch("https://formsubmit.co/ajax/bethke.ftr@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
+    } catch {
+      // continue
+    }
 
     setSubmitted(true);
     setLoading(false);

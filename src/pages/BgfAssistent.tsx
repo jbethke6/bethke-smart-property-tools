@@ -5,7 +5,7 @@ import toolsImage from "@/assets/tools-section.jpg";
 const BgfAssistent = () => (
   <Layout>
     <DetailPageHero
-      title="BGF-Assistent"
+      title="BGF-Held"
       subtitle="Smart Tool"
       description="Laden Sie Ihren Grundriss hoch – mein Tool berechnet automatisch die Bruttogrundfläche (BGF) nach DIN 277. Ich prüfe das Ergebnis manuell und liefere Ihnen ein professionelles PDF."
       image={toolsImage}
@@ -14,7 +14,8 @@ const BgfAssistent = () => (
         "Ideal für Makler, Energieberater, Hausverwaltungen",
         "Auch für komplexe Grundrisse geeignet",
       ]}
-      buttonText="Angebot anfragen"
+      buttonText="Jetzt BGF-Held testen"
+      buttonHref="/smart-tools-demo"
     />
   </Layout>
 );

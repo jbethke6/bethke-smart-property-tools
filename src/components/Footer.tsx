@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.jpeg";
 
 export function Footer() {
   return (
@@ -6,9 +7,12 @@ export function Footer() {
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="mb-3 text-sm font-bold">
-              Bethke <span className="text-primary">–</span> Smart Immo Services
-            </h3>
+            <div className="mb-3 flex items-center gap-2.5">
+              <img src={logo} alt="Logo" className="h-9 w-9 rounded-md object-cover" />
+              <h3 className="text-sm font-bold">
+                Bethke <span className="text-primary">–</span> Smart Immo Services
+              </h3>
+            </div>
             <p className="text-sm text-muted-foreground">
               Digitale Immobilienlösungen & maßgeschneiderte Tools – alles aus einer Hand.
             </p>
@@ -16,8 +20,8 @@ export function Footer() {
           <div>
             <h4 className="mb-3 text-sm font-semibold">Smart Tools</h4>
             <div className="space-y-2">
-              <Link to="/bgf-assistent" className="block text-sm text-muted-foreground hover:text-primary transition-colors">BGF-Assistent</Link>
-              <Link to="/foerder-check" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Förder-Check</Link>
+              <Link to="/bgf-held" className="block text-sm text-muted-foreground hover:text-primary transition-colors">BGF-Held</Link>
+              <Link to="/foerderheld" className="block text-sm text-muted-foreground hover:text-primary transition-colors">FörderHeld</Link>
               <Link to="/individuelle-tools" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Individuelle Tools</Link>
             </div>
           </div>
