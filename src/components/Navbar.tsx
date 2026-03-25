@@ -2,14 +2,15 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.jpeg";
 
 const navItems = [
   { label: "Startseite", href: "/" },
   {
     label: "Smart Tools",
     children: [
-      { label: "BGF-Assistent", href: "/bgf-assistent" },
-      { label: "Förder-Check", href: "/foerder-check" },
+      { label: "BGF-Held", href: "/bgf-held" },
+      { label: "FörderHeld", href: "/foerderheld" },
       { label: "Individuelle Tools", href: "/individuelle-tools" },
     ],
   },
@@ -33,9 +34,10 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-lg font-bold text-foreground">
-            Bethke <span className="text-primary">–</span> Smart Immo Services
+        <Link to="/" className="flex items-center gap-2.5">
+          <img src={logo} alt="Bethke Smart Immo Services Logo" className="h-10 w-10 rounded-md object-cover" />
+          <span className="text-lg font-bold text-foreground hidden sm:inline">
+            Bethke <span className="text-primary">–</span> Smart Immo
           </span>
         </Link>
 
