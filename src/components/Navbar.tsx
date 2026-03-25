@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/7c8eae15-1470-48a0-8ceb-1ddf732aef62.png";
 
 const navItems = [
   { label: "Startseite", href: "/" },
@@ -10,7 +10,7 @@ const navItems = [
     label: "Smart Tools",
     children: [
       { label: "BGF-Held", href: "/bgf-held" },
-      { label: "FörderHeld", href: "/foerderheld" },
+      { label: "FörderHeld", href: "/foerder-held" },
       { label: "Individuelle Tools", href: "/individuelle-tools" },
     ],
   },
