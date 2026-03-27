@@ -35,11 +35,8 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="Bethke Smart Immo Services Logo" className="h-10 w-10 rounded-md object-cover" />
-          <span className="text-lg font-bold text-foreground hidden sm:inline">
-            Bethke <span className="text-primary">–</span> Smart Immo
-          </span>
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Bethke Smart Immo Services Logo" className="h-12 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}

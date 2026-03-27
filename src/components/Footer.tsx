@@ -18,7 +18,7 @@ export function Footer() {
             <h4 className="mb-3 text-sm font-semibold">Smart Tools</h4>
             <div className="space-y-2">
               <Link to="/bgf-held" className="block text-sm text-muted-foreground hover:text-primary transition-colors">BGF-Held</Link>
-              <Link to="/foerderheld" className="block text-sm text-muted-foreground hover:text-primary transition-colors">FörderHeld</Link>
+              <Link to="/foerder-held" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Förder-Held</Link>
               <Link to="/individuelle-tools" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Individuelle Tools</Link>
             </div>
           </div>

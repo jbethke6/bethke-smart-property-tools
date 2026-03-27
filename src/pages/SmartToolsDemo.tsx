@@ -288,7 +288,7 @@ const SmartToolsDemo = () => (
                 <Search className="h-5 w-5" />
               </div>
               <div>
-                <h2 className="text-xl font-semibold">FörderHeld</h2>
+                <h2 className="text-xl font-semibold">Förder-Held</h2>
                 <p className="text-xs text-muted-foreground">Förderprogramme finden</p>
               </div>
             </div>

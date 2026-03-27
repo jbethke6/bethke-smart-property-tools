@@ -73,9 +73,9 @@ const Index = () => {
             />
             <ServiceCard
               icon={Search}
-              title="FörderHeld"
+              title="Förder-Held"
               description="Automatische Auswertung von KfW, BAFA, Landes- und Kommunalförderungen. Alle passenden Programme auf einen Blick."
-              href="/foerderheld"
+              href="/foerder-held"
             />
             <ServiceCard
               icon={Wrench}
