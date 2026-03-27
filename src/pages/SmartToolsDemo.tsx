@@ -138,7 +138,7 @@ function BgfDemo() {
   );
 }
 
-/* ─── FörderHeld Demo ─── */
+/* ─── Förder-Held Demo ─── */
 const massnahmen = [
   "Dämmung Außenwand",
   "Dachdämmung",
