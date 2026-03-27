@@ -7,11 +7,8 @@ export function Footer() {
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <div className="mb-3 flex items-center gap-2.5">
-              <img src={logo} alt="Logo" className="h-9 w-9 rounded-md object-cover" />
-              <h3 className="text-sm font-bold">
-                Bethke <span className="text-primary">–</span> Smart Immo Services
-              </h3>
+            <div className="mb-3 flex items-center gap-2">
+              <img src={logo} alt="Bethke Smart Immo Services Logo" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-sm text-muted-foreground">
               Digitale Immobilienlösungen & maßgeschneiderte Tools – alles aus einer Hand.
