@@ -32,7 +32,7 @@ const Index = () => {
               Digitale Immobilienlösungen aus einer Hand
             </motion.div>
             <h1 className="mb-5 text-4xl font-extrabold tracking-tight text-[hsl(0,0%,100%)] md:text-5xl lg:text-6xl">
-              Bethke <span className="text-primary">–</span> Smart Immo Services
+              Digitale Immobilienlösungen <span className="text-primary">&</span> maßgeschneiderte Tools
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[hsl(0,0%,82%)] md:text-xl">
               Grundrisse, BGF-Berechnung, Förder-Check, 3D-Touren, Websites und maßgeschneiderte Tools für die Immobilienbranche.
