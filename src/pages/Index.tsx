@@ -41,8 +41,8 @@ const Index = () => {
               <Button asChild size="lg" className="text-base px-8">
                 <Link to="/kontakt">Jetzt unverbindlich anfragen</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-[hsl(0,0%,100%,0.2)] text-[hsl(0,0%,100%)] hover:bg-[hsl(0,0%,100%,0.1)]">
-                <Link to="/smart-tools-demo">Smart Tools live erleben</Link>
+              <Button asChild size="lg" variant="outline" className="border-[hsl(0,0%,100%,0.25)] bg-[hsl(0,0%,100%,0.08)] text-[hsl(0,0%,100%)] hover:bg-[hsl(0,0%,100%,0.15)] backdrop-blur">
+                <Link to="/bgf-held">Smart Tools entdecken</Link>
               </Button>
             </div>
           </motion.div>
