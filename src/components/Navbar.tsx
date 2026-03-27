@@ -11,7 +11,7 @@ const navItems = [
     label: "Smart Tools",
     children: [
       { label: "BGF-Held", href: "/bgf-held" },
-      { label: "FörderHeld", href: "/foerder-held" },
+      { label: "Förder-Held", href: "/foerder-held" },
       { label: "Individuelle Tools", href: "/individuelle-tools" },
     ],
   },
