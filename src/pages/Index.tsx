@@ -42,7 +42,7 @@ const Index = () => {
                 <Link to="/kontakt">Jetzt unverbindlich anfragen</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-[hsl(0,0%,100%,0.2)] text-[hsl(0,0%,100%)] hover:bg-[hsl(0,0%,100%,0.1)]">
-                <Link to="/smart-tools-demo">Smart Tools testen</Link>
+                <Link to="/smart-tools-demo">Smart Tools live erleben</Link>
               </Button>
             </div>
           </motion.div>
