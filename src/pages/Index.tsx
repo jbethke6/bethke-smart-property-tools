@@ -32,7 +32,7 @@ const Index = () => {
               Digitale Immobilienlösungen aus einer Hand
             </motion.div>
             <h1 className="mb-5 text-4xl font-extrabold tracking-tight text-[hsl(0,0%,100%)] md:text-5xl lg:text-6xl">
-              Bethke <span className="text-primary">–</span> Smart Immo Services
+              Digitale Immobilienlösungen <span className="text-primary">&</span> maßgeschneiderte Tools
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[hsl(0,0%,82%)] md:text-xl">
               Grundrisse, BGF-Berechnung, Förder-Check, 3D-Touren, Websites und maßgeschneiderte Tools für die Immobilienbranche.
@@ -42,7 +42,7 @@ const Index = () => {
                 <Link to="/kontakt">Jetzt unverbindlich anfragen</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-[hsl(0,0%,100%,0.2)] text-[hsl(0,0%,100%)] hover:bg-[hsl(0,0%,100%,0.1)]">
-                <Link to="/smart-tools-demo">Smart Tools testen</Link>
+                <Link to="/smart-tools-demo">Smart Tools live erleben</Link>
               </Button>
             </div>
           </motion.div>
@@ -73,9 +73,9 @@ const Index = () => {
             />
             <ServiceCard
               icon={Search}
-              title="FörderHeld"
+              title="Förder-Held"
               description="Automatische Auswertung von KfW, BAFA, Landes- und Kommunalförderungen. Alle passenden Programme auf einen Blick."
-              href="/foerderheld"
+              href="/foerder-held"
             />
             <ServiceCard
               icon={Wrench}

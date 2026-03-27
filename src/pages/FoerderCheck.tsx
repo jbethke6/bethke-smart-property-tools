@@ -4,7 +4,7 @@ import { DetailPageHero } from "@/components/DetailPageHero";
 const FoerderCheck = () => (
   <Layout>
     <DetailPageHero
-      title="FörderHeld"
+      title="Förder-Held"
       subtitle="Smart Tool"
       description="Auf Basis von Baujahr, PLZ, BGF und geplanten Maßnahmen ermittelt mein Tool alle passenden Förderprogramme – von KfW und BAFA über Landes- bis hin zu kommunalen Töpfen. Sie erhalten eine übersichtliche Zusammenfassung mit Antragslinks."
       benefits={[
@@ -13,7 +13,7 @@ const FoerderCheck = () => (
         "Übersichtliche Zusammenfassung mit direkten Antragslinks",
       ]}
       note="Arbeitshilfe – eine verbindliche Beratung durch Fachpersonal ersetzen wir nicht."
-      buttonText="Jetzt FörderHeld testen"
+      buttonText="Jetzt Förder-Held testen"
       buttonHref="/smart-tools-demo"
     />
   </Layout>

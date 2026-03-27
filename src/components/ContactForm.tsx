@@ -7,7 +7,7 @@ import { toast } from "@/hooks/use-toast";
 
 const services = [
   "BGF-Held",
-  "FörderHeld",
+  "Förder-Held",
   "Grundriss & BGF (Service)",
   "3D-Tour",
   "Immobilien-Website",

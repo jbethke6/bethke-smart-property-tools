@@ -138,7 +138,7 @@ function BgfDemo() {
   );
 }
 
-/* ─── FörderHeld Demo ─── */
+/* ─── Förder-Held Demo ─── */
 const massnahmen = [
   "Dämmung Außenwand",
   "Dachdämmung",
@@ -167,7 +167,7 @@ function FoerderDemo() {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("email", email);
-    formData.append("_subject", `Neuer FörderHeld Auftrag von ${name}`);
+    formData.append("_subject", `Neuer Förder-Held Auftrag von ${name}`);
     formData.append("_template", "table");
     formData.append("Baujahr", baujahr);
     formData.append("PLZ", plz);
@@ -288,7 +288,7 @@ const SmartToolsDemo = () => (
                 <Search className="h-5 w-5" />
               </div>
               <div>
-                <h2 className="text-xl font-semibold">FörderHeld</h2>
+                <h2 className="text-xl font-semibold">Förder-Held</h2>
                 <p className="text-xs text-muted-foreground">Förderprogramme finden</p>
               </div>
             </div>
