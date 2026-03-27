@@ -23,7 +23,7 @@ const navItems = [
       { label: "Immobilien-Website", href: "/immobilien-website" },
     ],
   },
-  { label: "Smart Tools Demo", href: "/smart-tools-demo" },
+  { label: "Smart Tools testen", href: "/bgf-held" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
