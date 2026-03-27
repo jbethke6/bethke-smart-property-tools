@@ -167,7 +167,7 @@ function FoerderDemo() {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("email", email);
-    formData.append("_subject", `Neuer FörderHeld Auftrag von ${name}`);
+    formData.append("_subject", `Neuer Förder-Held Auftrag von ${name}`);
     formData.append("_template", "table");
     formData.append("Baujahr", baujahr);
     formData.append("PLZ", plz);
