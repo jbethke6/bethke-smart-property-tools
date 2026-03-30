@@ -14,7 +14,7 @@ const Impressum = () => (
         </p>
         <h2 className="mt-6 text-lg font-semibold text-foreground">Kontakt</h2>
         <p>
-          E-Mail: justin@bethke-smartimmo.de
+          E-Mail: info@smartimmo.solutions
         </p>
         <h2 className="mt-6 text-lg font-semibold text-foreground">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
         <p>
