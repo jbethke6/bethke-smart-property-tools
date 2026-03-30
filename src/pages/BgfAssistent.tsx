@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { toast } from "@/hooks/use-toast";
 import { Calculator, Upload, X, FileImage, CheckCircle2, ArrowRight } from "lucide-react";
-import toolsImage from "@/assets/tools-section.jpg";
+import bgfHero from "@/assets/bgf-hero.jpg";
 
 const FORM_EMAIL = "bethke.ftr@gmail.com";
 
@@ -69,7 +69,7 @@ function BgfForm() {
       <div className="rounded-xl border bg-accent/50 p-8 text-center">
         <CheckCircle2 className="mx-auto mb-3 h-12 w-12 text-primary" />
         <p className="text-xl font-semibold">Vielen Dank, {name}!</p>
-        <p className="mt-2 text-muted-foreground">Ihre Grundrisse wurden übermittelt. Ich erstelle Ihnen zeitnah ein persönliches Angebot.</p>
+        <p className="mt-2 text-muted-foreground">Ihre Grundrisse wurden übermittelt. Ich erstelle Ihnen zeitnah ein persönliches Angebot und melde mich per E-Mail bei Ihnen.</p>
       </div>
     );
   }
@@ -93,7 +93,7 @@ function BgfForm() {
           <p className="text-sm font-medium text-muted-foreground">
             Dateien hierher ziehen oder <span className="text-primary underline">durchsuchen</span>
           </p>
-          <p className="mt-1 text-xs text-muted-foreground/70">Bilder (JPG, PNG) oder PDF</p>
+          <p className="mt-1 text-xs text-muted-foreground/70">Bilder (JPG, PNG) oder PDF – mehrere Dateien möglich</p>
           <input
             id="bgf-file-input"
             type="file"
@@ -136,10 +136,10 @@ function BgfForm() {
 }
 
 const ablaufSchritte = [
-  { step: "1", title: "Grundriss hochladen", description: "Laden Sie Ihren Grundriss als Bild oder PDF hoch." },
-  { step: "2", title: "Automatische Berechnung", description: "Mein Tool berechnet die BGF nach DIN 277." },
-  { step: "3", title: "Manuelle Prüfung", description: "Ich prüfe das Ergebnis persönlich auf Korrektheit." },
-  { step: "4", title: "Ergebnis erhalten", description: "Sie erhalten ein professionelles PDF mit allen Daten." },
+  { step: "1", title: "Grundriss hochladen", description: "Laden Sie Ihren Grundriss als Bild oder PDF über das Formular hoch. Auch mehrere Dateien gleichzeitig sind möglich." },
+  { step: "2", title: "Automatische Analyse", description: "Mein Tool analysiert Ihren Grundriss und berechnet die Bruttogrundfläche (BGF) nach DIN 277 automatisch." },
+  { step: "3", title: "Persönliche Prüfung", description: "Ich überprüfe jedes Ergebnis manuell und korrigiere bei Bedarf – so ist höchste Genauigkeit garantiert." },
+  { step: "4", title: "Professionelles PDF", description: "Sie erhalten ein druckfertiges PDF mit allen Flächenberechnungen, Raumaufteilungen und der BGF-Zusammenfassung." },
 ];
 
 const BgfAssistent = () => (
@@ -154,10 +154,16 @@ const BgfAssistent = () => (
             </span>
             <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">BGF-Held</h1>
             <p className="mb-6 text-lg text-muted-foreground leading-relaxed">
-              Laden Sie Ihren Grundriss hoch – mein Tool berechnet automatisch die Bruttogrundfläche (BGF) nach DIN 277. Ich prüfe das Ergebnis manuell und liefere Ihnen ein professionelles PDF.
+              Die Bruttogrundfläche (BGF) ist eine zentrale Kennzahl in der Immobilienbewertung, bei Energieausweisen und für Baugenehmigungen. Mit dem BGF-Held laden Sie einfach Ihren Grundriss hoch – mein Tool berechnet die BGF automatisch nach DIN 277 und ich prüfe das Ergebnis persönlich, bevor Sie ein professionelles PDF erhalten.
             </p>
             <div className="space-y-3">
-              {["Schnell, präzise, persönliche Nachkontrolle", "Ideal für Makler, Energieberater, Hausverwaltungen", "Auch für komplexe Grundrisse geeignet"].map((b) => (
+              {[
+                "Schnelle, präzise Berechnung nach DIN 277",
+                "Persönliche Nachkontrolle durch Fachpersonal",
+                "Ideal für Makler, Energieberater & Hausverwaltungen",
+                "Auch für komplexe Mehrgeschoss-Grundrisse geeignet",
+                "Ergebnis als druckfertiges PDF inkl. Raumaufteilung",
+              ].map((b) => (
                 <div key={b} className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <span className="text-sm">{b}</span>
@@ -170,7 +176,7 @@ const BgfAssistent = () => (
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
-            <img src={toolsImage} alt="BGF-Berechnung" className="rounded-xl shadow-lg" />
+            <img src={bgfHero} alt="BGF-Berechnung am Schreibtisch mit Grundriss und Tablet" className="rounded-xl shadow-lg" width={1280} height={720} />
           </motion.div>
         </div>
       </div>
@@ -179,7 +185,10 @@ const BgfAssistent = () => (
     {/* Ablauf */}
     <section className="py-16 lg:py-24">
       <div className="container">
-        <h2 className="mb-12 text-center text-2xl font-bold md:text-3xl">So funktioniert's</h2>
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl">So funktioniert's</h2>
+          <p className="text-muted-foreground">In nur vier Schritten von Ihrem Grundriss zur fertigen BGF-Berechnung – schnell, transparent und zuverlässig.</p>
+        </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ablaufSchritte.map((s, i) => (
             <motion.div
@@ -215,7 +224,7 @@ const BgfAssistent = () => (
               </div>
               <div>
                 <h2 className="text-2xl font-bold">Jetzt Grundriss einreichen</h2>
-                <p className="text-sm text-muted-foreground">Ich melde mich mit einem persönlichen Angebot</p>
+                <p className="text-sm text-muted-foreground">Laden Sie Ihre Datei(en) hoch – ich melde mich mit einem persönlichen Angebot</p>
               </div>
             </div>
             <div className="rounded-xl border bg-card p-6 shadow-sm lg:p-8">

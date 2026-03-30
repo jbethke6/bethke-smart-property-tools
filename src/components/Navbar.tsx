@@ -36,7 +36,7 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Bethke Smart Immo Services Logo" className="h-12 w-auto object-contain" />
+          <img src={logo} alt="smartimmo.solutions Logo" className="h-14 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}

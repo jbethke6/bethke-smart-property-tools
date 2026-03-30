@@ -6,16 +6,21 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { motion } from "framer-motion";
 import { toast } from "@/hooks/use-toast";
 import { Search, CheckCircle2, ArrowRight } from "lucide-react";
+import foerderHero from "@/assets/foerder-hero.jpg";
 
 const FORM_EMAIL = "bethke.ftr@gmail.com";
 
 const massnahmen = [
   "Dämmung Außenwand",
   "Dachdämmung",
+  "Kellerdeckendämmung",
   "Fenster-Austausch",
-  "Heizungstausch",
-  "Solaranlage",
-  "Lüftungsanlage",
+  "Heizungstausch (Wärmepumpe)",
+  "Heizungstausch (Pellet/Biomasse)",
+  "Solaranlage (Photovoltaik)",
+  "Solarthermie",
+  "Lüftungsanlage mit Wärmerückgewinnung",
+  "Komplettsanierung zum Effizienzhaus",
 ];
 
 function FoerderForm() {
@@ -26,6 +31,7 @@ function FoerderForm() {
   const [plz, setPlz] = useState("");
   const [bgf, setBgf] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
+  const [anmerkungen, setAnmerkungen] = useState("");
 
   const toggleMassnahme = (m: string) => {
     setSelected((prev) => prev.includes(m) ? prev.filter((x) => x !== m) : [...prev, m]);
@@ -43,6 +49,7 @@ function FoerderForm() {
     formData.append("PLZ", plz);
     formData.append("BGF (m²)", bgf || "Nicht angegeben");
     formData.append("Maßnahmen", selected.length > 0 ? selected.join(", ") : "Keine ausgewählt");
+    formData.append("Anmerkungen", anmerkungen || "Keine");
 
     try {
       await fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {
@@ -62,7 +69,7 @@ function FoerderForm() {
       <div className="rounded-xl border bg-accent/50 p-8 text-center">
         <CheckCircle2 className="mx-auto mb-3 h-12 w-12 text-primary" />
         <p className="text-xl font-semibold">Vielen Dank, {name}!</p>
-        <p className="mt-2 text-muted-foreground">Ihre Daten wurden übermittelt. Ich erstelle Ihnen zeitnah eine Förder-Übersicht.</p>
+        <p className="mt-2 text-muted-foreground">Ihre Daten wurden übermittelt. Ich erstelle Ihnen zeitnah eine umfassende Förder-Übersicht mit allen passenden Programmen und Antragslinks.</p>
       </div>
     );
   }
@@ -104,6 +111,10 @@ function FoerderForm() {
           ))}
         </div>
       </div>
+      <div>
+        <label className="mb-1.5 block text-sm font-semibold">Anmerkungen (optional)</label>
+        <Input placeholder="z.B. Denkmalschutz, besondere Anforderungen..." value={anmerkungen} onChange={(e) => setAnmerkungen(e.target.value)} />
+      </div>
       <Button type="submit" size="lg" className="w-full">
         <Search className="mr-2 h-4 w-4" />
         Förder-Check absenden
@@ -113,10 +124,10 @@ function FoerderForm() {
 }
 
 const ablaufSchritte = [
-  { step: "1", title: "Daten eingeben", description: "Baujahr, PLZ, Fläche und geplante Maßnahmen angeben." },
-  { step: "2", title: "Automatische Auswertung", description: "Mein Tool prüft KfW, BAFA, Landes- und Kommunalprogramme." },
-  { step: "3", title: "Persönliche Prüfung", description: "Ich überprüfe die Ergebnisse und ergänze ggf. weitere Optionen." },
-  { step: "4", title: "Förder-Übersicht erhalten", description: "Sie bekommen eine klare Übersicht mit Antragslinks." },
+  { step: "1", title: "Daten eingeben", description: "Geben Sie Baujahr, PLZ, Fläche und Ihre geplanten Sanierungsmaßnahmen ein – je genauer, desto besser das Ergebnis." },
+  { step: "2", title: "Automatische Auswertung", description: "Mein Tool durchsucht alle relevanten Förderprogramme von KfW, BAFA, Landesbanken und kommunalen Stellen." },
+  { step: "3", title: "Persönliche Prüfung", description: "Ich prüfe die Ergebnisse, ergänze ggf. regionale Sonderprogramme und optimiere die Kombination der Förderungen." },
+  { step: "4", title: "Förder-Übersicht erhalten", description: "Sie erhalten eine klare Übersicht aller Fördermöglichkeiten mit Förderhöhe, Bedingungen und direkten Antragslinks." },
 ];
 
 const FoerderCheck = () => (
@@ -124,30 +135,39 @@ const FoerderCheck = () => (
     {/* Hero */}
     <section className="relative overflow-hidden bg-secondary/30 py-16 lg:py-24">
       <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="mb-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
               Smart Tool
             </span>
             <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Förder-Held</h1>
             <p className="mb-6 text-lg text-muted-foreground leading-relaxed">
-              Auf Basis von Baujahr, PLZ, BGF und geplanten Maßnahmen ermittelt mein Tool alle passenden Förderprogramme – von KfW und BAFA über Landes- bis hin zu kommunalen Töpfen.
+              Bei der energetischen Sanierung gibt es zahlreiche Förderprogramme – von der KfW über BAFA bis hin zu Landes- und Kommunalförderungen. Der Förder-Held durchsucht automatisch alle relevanten Programme basierend auf Ihren Gebäudedaten und geplanten Maßnahmen. So verpassen Sie keine Zuschüsse und sparen bares Geld.
             </p>
-            <div className="mx-auto flex flex-wrap justify-center gap-3 mb-6">
-              {["KfW, BAFA, Landes- und Kommunalförderungen", "Übersichtliche Zusammenfassung mit Antragslinks", "Automatische Auswertung aller relevanten Programme"].map((b) => (
-                <div key={b} className="flex items-center gap-2 rounded-lg bg-card border px-4 py-2">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+            <div className="space-y-3">
+              {[
+                "KfW, BAFA, Landes- und Kommunalförderungen auf einen Blick",
+                "Automatische Auswertung aller relevanten Programme",
+                "Übersichtliche Zusammenfassung mit Förderhöhe und Antragslinks",
+                "Persönliche Prüfung und Optimierung der Förderkombination",
+                "Ideal für Eigentümer, Energieberater und Hausverwaltungen",
+              ].map((b) => (
+                <div key={b} className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <span className="text-sm">{b}</span>
                 </div>
               ))}
             </div>
-            <div className="inline-flex items-baseline gap-1 rounded-xl bg-primary/10 px-5 py-3">
+            <div className="mt-8 inline-flex items-baseline gap-1 rounded-xl bg-primary/10 px-5 py-3">
               <span className="text-2xl font-bold text-primary">ab 29 €</span>
               <span className="text-sm text-muted-foreground">pro Auswertung</span>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground italic">
+            <p className="mt-3 text-xs text-muted-foreground italic">
               Arbeitshilfe – eine verbindliche Beratung durch Fachpersonal ersetzen wir nicht.
             </p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
+            <img src={foerderHero} alt="Förderprogramme und energetische Sanierung" className="rounded-xl shadow-lg" width={1280} height={720} />
           </motion.div>
         </div>
       </div>
@@ -156,7 +176,10 @@ const FoerderCheck = () => (
     {/* Ablauf */}
     <section className="py-16 lg:py-24">
       <div className="container">
-        <h2 className="mb-12 text-center text-2xl font-bold md:text-3xl">So funktioniert's</h2>
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl">So funktioniert's</h2>
+          <p className="text-muted-foreground">In vier einfachen Schritten zu Ihrer individuellen Förder-Übersicht – transparent, schnell und zuverlässig.</p>
+        </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ablaufSchritte.map((s, i) => (
             <motion.div
@@ -192,7 +215,7 @@ const FoerderCheck = () => (
               </div>
               <div>
                 <h2 className="text-2xl font-bold">Jetzt Förder-Check starten</h2>
-                <p className="text-sm text-muted-foreground">Ich melde mich mit Ihren Fördermöglichkeiten</p>
+                <p className="text-sm text-muted-foreground">Füllen Sie das Formular aus – ich melde mich mit Ihren individuellen Fördermöglichkeiten</p>
               </div>
             </div>
             <div className="rounded-xl border bg-card p-6 shadow-sm lg:p-8">

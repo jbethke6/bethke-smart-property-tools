@@ -1,19 +1,20 @@
 import { Layout } from "@/components/Layout";
 import { DetailPageHero } from "@/components/DetailPageHero";
-import websiteImage from "@/assets/website-service.jpg";
+import websiteHero from "@/assets/immobilien-website-hero.jpg";
 
 const ImmobilienWebsite = () => (
   <Layout>
     <DetailPageHero
       title="Immobilien-Website"
       subtitle="Immobilien-Service"
-      description="Moderne, individuelle Websites für Ihre Immobilie – inklusive aller Inhalte: Grundriss, 3D-Tour, Exposé-Texte und Bilder. Alles aus einer Hand, sofort einsatzbereit."
-      image={websiteImage}
+      description="Eine professionelle Immobilien-Website ist mehr als nur eine digitale Visitenkarte – sie ist Ihr stärkstes Vermarktungstool. Ich erstelle für Sie moderne, mobiloptimierte Websites, die alle relevanten Inhalte bündeln: Grundrisse, 3D-Touren, Exposé-Texte, Bildergalerien und Kontaktformulare. Alles aus einer Hand, SEO-optimiert und in wenigen Tagen online."
+      image={websiteHero}
       benefits={[
-        "Individuelles Design, mobile-optimiert",
-        "Integration von Grundrissen und 3D-Touren",
-        "SEO-optimiert für bessere Sichtbarkeit",
-        "Schnelle Umsetzung – in wenigen Tagen online",
+        "Individuelles, modernes Design – vollständig mobiloptimiert",
+        "Integration von Grundrissen, 3D-Touren und Exposé-Inhalten",
+        "SEO-optimiert für bessere Auffindbarkeit bei Google",
+        "Schnelle Umsetzung – in der Regel innerhalb weniger Tage online",
+        "Inklusive Hosting-Beratung und technischem Support",
       ]}
       buttonText="Angebot anfragen"
     />

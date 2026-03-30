@@ -32,10 +32,10 @@ const Index = () => {
               Digitale Immobilienlösungen aus einer Hand
             </motion.div>
             <h1 className="mb-5 text-4xl font-extrabold tracking-tight text-[hsl(0,0%,100%)] md:text-5xl lg:text-6xl">
-              Digitale Immobilienlösungen <span className="text-primary">&</span> maßgeschneiderte Tools
+              Smarte Tools <span className="text-primary">&</span> professionelle Immobilien-Services
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[hsl(0,0%,82%)] md:text-xl">
-              Grundrisse, BGF-Berechnung, Förder-Check, 3D-Touren, Websites und maßgeschneiderte Tools für die Immobilienbranche.
+              BGF-Berechnung, Förder-Check, CAD-Grundrisse, 3D-360°-Touren, individuelle Websites und maßgeschneiderte Automatisierungen – alles aus einer Hand für die Immobilienbranche.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Button asChild size="lg" className="text-base px-8">
@@ -61,26 +61,26 @@ const Index = () => {
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Das Herzstück</p>
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Smart Tools</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Intelligente Werkzeuge, die Immobilienprofis Zeit und Nerven sparen.
+              Intelligente, digitale Werkzeuge, die Immobilienprofis im Alltag Zeit und Nerven sparen. Automatisiert, zuverlässig und persönlich geprüft.
             </p>
           </motion.div>
           <div className="grid gap-6 md:grid-cols-3">
             <ServiceCard
               icon={Calculator}
               title="BGF-Held"
-              description="Automatisierte Bruttogrundflächenberechnung aus Grundriss-Bildern – mit manueller Endprüfung für höchste Genauigkeit."
+              description="Automatisierte Bruttogrundflächen-Berechnung aus Grundriss-Bildern nach DIN 277 – mit persönlicher Endprüfung für höchste Genauigkeit. Ergebnis als professionelles PDF."
               href="/bgf-held"
             />
             <ServiceCard
               icon={Search}
               title="Förder-Held"
-              description="Automatische Auswertung von KfW, BAFA, Landes- und Kommunalförderungen. Alle passenden Programme auf einen Blick."
+              description="Automatische Auswertung aller passenden Förderprogramme von KfW, BAFA, Landesbanken und Kommunen. Übersichtliche Zusammenfassung mit Förderhöhe und Antragslinks."
               href="/foerder-held"
             />
             <ServiceCard
               icon={Wrench}
               title="Individuelle Tools für Sie"
-              description="Maßgeschneiderte Automatisierungen – von n8n-Workflows über React-Frontends bis hin zu Datenbank-Lösungen."
+              description="Maßgeschneiderte Automatisierungen für Ihre Prozesse – von n8n-Workflows über React-Frontends bis hin zu kompletten Datenbank- und API-Lösungen."
               href="/individuelle-tools"
               buttonText="Beratung anfragen"
               variant="accent"
@@ -100,24 +100,27 @@ const Index = () => {
           >
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Alles aus einer Hand</p>
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Immobilien-Services</h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground">
+              Professionelle Dienstleistungen rund um die Immobilienvermarktung – von der Vermessung über die 3D-Tour bis zur fertigen Website.
+            </p>
           </motion.div>
           <div className="grid gap-6 md:grid-cols-3">
             <ServiceCard
               icon={PenTool}
               title="Grundriss & BGF"
-              description="CAD-genaue Grundrisse mit optionaler Vor-Ort-Vermessung. Professionelle Pläne für Makler und Energieberater."
+              description="CAD-genaue Grundrisse mit optionaler Vor-Ort-Vermessung und BGF-Berechnung nach DIN 277. Professionelle Pläne für Makler, Hausverwaltungen und Energieberater."
               href="/grundriss-service"
             />
             <ServiceCard
               icon={Camera}
               title="3D-360°-Tour"
-              description="Immersive Touren mit Ricoh Theta X – gehostet auf Panoee. Ideal für Online-Besichtigungen."
+              description="Immersive 360°-Touren mit der Ricoh Theta X – professionell gehostet auf Panoee. Ideal für Online-Besichtigungen, Exposés und Immobilienportale."
               href="/3d-tour"
             />
             <ServiceCard
               icon={Globe}
               title="Immobilien-Website"
-              description="Moderne, individuelle Websites inkl. aller Inhalte – Grundriss, Tour, Exposé. Alles aus einer Hand."
+              description="Moderne, individuelle Websites für Ihre Immobilie – inklusive Grundriss, 3D-Tour, Exposé-Texte und Bildergalerie. SEO-optimiert und in wenigen Tagen online."
               href="/immobilien-website"
             />
           </div>
@@ -135,7 +138,7 @@ const Index = () => {
           >
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Portfolio</p>
             <h2 className="mb-4 text-3xl font-bold">Referenzen</h2>
-            <p className="mx-auto max-w-xl text-muted-foreground">Ausgewählte Beispiele meiner Arbeit.</p>
+            <p className="mx-auto max-w-xl text-muted-foreground">Ausgewählte Beispiele meiner Arbeit – weitere Projekte und Grundriss-Referenzen werden laufend ergänzt.</p>
           </motion.div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Grundriss Placeholder */}
@@ -146,12 +149,12 @@ const Index = () => {
               className="group overflow-hidden rounded-xl border bg-card shadow-sm transition-shadow hover:shadow-lg"
             >
               <div className="aspect-video overflow-hidden bg-muted">
-                <img src={tourImage} alt="Grundriss-Projekt" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={tourImage} alt="Grundriss-Projekt" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-5">
                 <span className="mb-2 inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Grundriss</span>
                 <h3 className="mb-1 font-semibold">Grundriss-Projekt</h3>
-                <p className="text-sm text-muted-foreground">Beispiel wird nachgereicht</p>
+                <p className="text-sm text-muted-foreground">Beispiel wird nachgereicht – Grundriss-Referenzen folgen in Kürze.</p>
               </div>
             </motion.div>
 
@@ -195,7 +198,7 @@ const Index = () => {
               className="group overflow-hidden rounded-xl border bg-card shadow-sm transition-shadow hover:shadow-lg"
             >
               <div className="aspect-video overflow-hidden bg-muted">
-                <img src={websiteImage} alt="SafeCycle Website" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={websiteImage} alt="SafeCycle Website" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-5">
                 <span className="mb-2 inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Website</span>
@@ -226,7 +229,7 @@ const Index = () => {
               Haben Sie ein Projekt oder brauchen ein individuelles Tool?
             </h2>
             <p className="mb-8 text-primary-foreground/80">
-              Lassen Sie uns sprechen – unverbindlich und kostenfrei.
+              Lassen Sie uns sprechen – unverbindlich und kostenfrei. Gemeinsam finden wir die passende Lösung für Ihre Anforderungen.
             </p>
             <Button
               asChild
