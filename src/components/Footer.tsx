@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="mb-3 flex items-center gap-2">
-              <img src={logo} alt="Bethke Smart Immo Services Logo" className="h-12 w-auto object-contain" />
+              <img src={logo} alt="smartimmo.solutions Logo" className="h-14 w-auto object-contain" />
             </div>
             <p className="text-sm text-muted-foreground">
               Digitale Immobilienlösungen & maßgeschneiderte Tools – alles aus einer Hand.
