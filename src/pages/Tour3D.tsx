@@ -7,13 +7,14 @@ const Tour3D = () => (
     <DetailPageHero
       title="3D-360°-Tour"
       subtitle="Immobilien-Service"
-      description="Immersive 360°-Touren mit der Ricoh Theta X – professionell gehostet auf Panoee. Ideal für Online-Besichtigungen und Exposés."
+      description="Ermöglichen Sie Ihren Interessenten eine immersive Online-Besichtigung – jederzeit und von überall. Mit der Ricoh Theta X erstelle ich hochauflösende 360°-Aufnahmen Ihrer Immobilie. Die fertige Tour wird professionell auf Panoee gehostet und lässt sich nahtlos in Exposés, Immobilienportale und Ihre eigene Website einbetten. Perfekt für Makler, Bauträger und Hausverwaltungen."
       image={tourImage}
       benefits={[
-        "Professionelle 360°-Aufnahmen vor Ort",
-        "Hosting auf Panoee – schnell, mobil-optimiert",
-        "Perfekt für Exposés und Immobilienportale",
-        "Einbettbar in jede Website",
+        "Professionelle 360°-Aufnahmen vor Ort mit der Ricoh Theta X",
+        "Hosting auf Panoee – schnell, mobiloptimiert, DSGVO-konform",
+        "Einbettbar in jede Website, Exposé oder Immobilienportal",
+        "Ideal für Online-Besichtigungen und Ferninteressenten",
+        "Steigerung der Verweildauer und Anfragequote",
       ]}
       buttonText="Angebot anfragen"
     />
