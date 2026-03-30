@@ -16,7 +16,7 @@ const Datenschutz = () => (
           <p>
             Justin Bethke<br />
             Bethke – Smart Immo Services<br />
-            E-Mail: justin@bethke-smartimmo.de
+            E-Mail: info@smartimmo.solutions
           </p>
         </section>
         <section>

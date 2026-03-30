@@ -40,7 +40,7 @@ const Kontakt = () => (
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span>justin@bethke-smartimmo.de</span>
+                  <span>info@smartimmo.solutions</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4 text-primary" />
