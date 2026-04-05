@@ -97,7 +97,7 @@ const BgfAssistent = () => (
               </div>
             </div>
             <div className="rounded-xl border bg-card p-6 shadow-sm lg:p-8">
-              <BgfForm />
+              <BgfOrderForm />
             </div>
           </motion.div>
         </div>
