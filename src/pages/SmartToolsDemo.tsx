@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const SmartToolsDemo = () => {
   const navigate = useNavigate();
-  useEffect(() => { navigate("/bgf-held", { replace: true }); }, [navigate]);
+  useEffect(() => { navigate("/grundrissheld", { replace: true }); }, [navigate]);
   return null;
 };
 

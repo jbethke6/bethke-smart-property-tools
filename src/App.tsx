@@ -25,6 +25,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout><Index /></Layout>} />
+          <Route path="/grundrissheld" element={<BgfAssistent />} />
           <Route path="/bgf-held" element={<BgfAssistent />} />
           <Route path="/bgf-assistent" element={<BgfAssistent />} />
           <Route path="/foerder-held" element={<FoerderCheck />} />

@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "@/hooks/use-toast";
 
 const services = [
-  "BGF-Held",
+  "Grundrissheld",
   "Förder-Held",
   "Grundriss & BGF (Service)",
   "3D-Tour",

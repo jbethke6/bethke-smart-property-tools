@@ -42,7 +42,7 @@ const Index = () => {
                 <Link to="/kontakt">Jetzt unverbindlich anfragen</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-[hsl(0,0%,100%,0.25)] bg-[hsl(0,0%,100%,0.08)] text-[hsl(0,0%,100%)] hover:bg-[hsl(0,0%,100%,0.15)] backdrop-blur">
-                <Link to="/bgf-held">Smart Tools entdecken</Link>
+                <Link to="/grundrissheld">Smart Tools entdecken</Link>
               </Button>
             </div>
           </motion.div>
@@ -67,9 +67,9 @@ const Index = () => {
           <div className="grid gap-6 md:grid-cols-3">
             <ServiceCard
               icon={Calculator}
-              title="BGF-Held"
-              description="Automatisierte Bruttogrundflächen-Berechnung aus Grundriss-Bildern nach DIN 277 – mit persönlicher Endprüfung für höchste Genauigkeit. Ergebnis als professionelles PDF."
-              href="/bgf-held"
+              title="Grundrissheld"
+              description="BGF-Berechnung nach DIN 277 und CAD-Digitalisierung aus Grundriss-Bildern – mit persönlicher Endprüfung für höchste Genauigkeit. Ergebnis als professionelles PDF."
+              href="/grundrissheld"
             />
             <ServiceCard
               icon={Search}
