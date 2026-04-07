@@ -1,4 +1,5 @@
 import * as pdfjsLib from "pdfjs-dist";
+import { BGF_PRICING, DIG_PRICING } from "@/lib/config";
 
 // Use CDN worker for pdf.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
@@ -14,21 +15,24 @@ export async function countPages(file: File): Promise<number> {
     const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
     return pdf.numPages;
   }
-  // Images = 1 page/floor each
   return 1;
 }
 
-export function calculatePrice(totalFloors: number): number {
+export function calculateBgfPrice(totalFloors: number): number {
   if (totalFloors <= 0) return 0;
-  // 29€ base (1st floor) + 15€ per additional floor, in cents
-  return 2900 + Math.max(0, totalFloors - 1) * 1500;
+  return BGF_PRICING.basePrice + Math.max(0, totalFloors - 1) * BGF_PRICING.additionalFloor;
+}
+
+export function calculateDigPrice(totalFloors: number): number {
+  if (totalFloors <= 0) return 0;
+  return DIG_PRICING.basePrice + Math.max(0, totalFloors - 1) * DIG_PRICING.additionalFloor;
 }
 
 export function formatPrice(cents: number): string {
   return (cents / 100).toFixed(2).replace(".", ",") + " €";
 }
 
-const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 export function validateFile(file: File): string | null {
   if (file.size > MAX_FILE_SIZE) {
@@ -39,4 +43,14 @@ export function validateFile(file: File): string | null {
     return `${file.name}: Nur JPG, PNG, WebP oder PDF erlaubt.`;
   }
   return null;
+}
+
+export function sanitizeFileName(name: string): string {
+  return name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ß/g, "ss")
+    .replace(/[^a-zA-Z0-9._-]/g, "_")
+    .replace(/_+/g, "_")
+    .toLowerCase();
 }

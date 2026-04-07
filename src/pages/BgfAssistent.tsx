@@ -1,14 +1,14 @@
 import { Layout } from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Calculator, CheckCircle2, ArrowRight } from "lucide-react";
+import { Calculator, CheckCircle2, ArrowRight, PenTool } from "lucide-react";
 import { BgfOrderForm } from "@/components/BgfOrderForm";
 import bgfHero from "@/assets/bgf-hero.jpg";
 
 const ablaufSchritte = [
   { step: "1", title: "Grundriss hochladen", description: "Laden Sie Ihren Grundriss als Bild oder PDF über das Formular hoch. Auch mehrere Dateien gleichzeitig sind möglich." },
-  { step: "2", title: "Automatische Analyse", description: "Mein Tool analysiert Ihren Grundriss und berechnet die Bruttogrundfläche (BGF) nach DIN 277 automatisch." },
-  { step: "3", title: "Persönliche Prüfung", description: "Ich überprüfe jedes Ergebnis manuell und korrigiere bei Bedarf – so ist höchste Genauigkeit garantiert." },
-  { step: "4", title: "Professionelles PDF", description: "Sie erhalten ein druckfertiges PDF mit allen Flächenberechnungen, Raumaufteilungen und der BGF-Zusammenfassung." },
+  { step: "2", title: "Services wählen", description: "Wählen Sie BGF-Berechnung, CAD-Digitalisierung oder beides – der Preis wird automatisch nach Etagenanzahl berechnet." },
+  { step: "3", title: "Sicher bezahlen", description: "Bezahlen Sie bequem und sicher über Stripe. Erst nach erfolgreicher Zahlung wird Ihr Auftrag bearbeitet." },
+  { step: "4", title: "Ergebnis per E-Mail", description: "Sie erhalten Ihr professionelles PDF mit allen Berechnungen und Zeichnungen direkt per E-Mail zugestellt." },
 ];
 
 const BgfAssistent = () => (
@@ -19,12 +19,30 @@ const BgfAssistent = () => (
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="mb-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-              Smart Tool
+              Smart Tools
             </span>
-            <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">BGF-Held</h1>
+            <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Grundrissheld</h1>
             <p className="mb-6 text-lg text-muted-foreground leading-relaxed">
-              Die Bruttogrundfläche (BGF) ist eine zentrale Kennzahl in der Immobilienbewertung, bei Energieausweisen und für Baugenehmigungen. Mit dem BGF-Held laden Sie einfach Ihren Grundriss hoch – mein Tool berechnet die BGF automatisch nach DIN 277 und ich prüfe das Ergebnis persönlich, bevor Sie ein professionelles PDF erhalten.
+              Zwei leistungsstarke Services rund um Ihren Grundriss – einzeln oder kombiniert buchbar. Laden Sie einfach Ihre Grundrisse hoch, wählen Sie die gewünschten Leistungen und erhalten Sie professionelle Ergebnisse per E-Mail.
             </p>
+            <div className="grid gap-4 sm:grid-cols-2 mb-6">
+              <div className="rounded-xl border bg-card p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Calculator className="h-5 w-5 text-primary" />
+                  <h3 className="font-semibold">BGF-Berechnung</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">Bruttogrundfläche nach DIN 277 – automatisch berechnet und manuell geprüft.</p>
+                <p className="text-sm font-semibold text-primary">ab 29,00 € / Etage</p>
+              </div>
+              <div className="rounded-xl border bg-card p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <PenTool className="h-5 w-5 text-primary" />
+                  <h3 className="font-semibold">CAD-Digitalisierung</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">Professionelle Nachzeichnung Ihres Grundrisses als maßstabsgetreue CAD-Datei.</p>
+                <p className="text-sm font-semibold text-primary">ab 59,00 € / Etage</p>
+              </div>
+            </div>
             <div className="space-y-3">
               {[
                 "Schnelle, präzise Berechnung nach DIN 277",
@@ -39,10 +57,6 @@ const BgfAssistent = () => (
                 </div>
               ))}
             </div>
-            <div className="mt-8 inline-flex items-baseline gap-1 rounded-xl bg-primary/10 px-5 py-3">
-              <span className="text-2xl font-bold text-primary">ab 29 €</span>
-              <span className="text-sm text-muted-foreground">pro Grundriss</span>
-            </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
             <img src={bgfHero} alt="BGF-Berechnung am Schreibtisch mit Grundriss und Tablet" className="rounded-xl shadow-lg" width={1280} height={720} />
@@ -56,7 +70,7 @@ const BgfAssistent = () => (
       <div className="container">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">So funktioniert's</h2>
-          <p className="text-muted-foreground">In nur vier Schritten von Ihrem Grundriss zur fertigen BGF-Berechnung – schnell, transparent und zuverlässig.</p>
+          <p className="text-muted-foreground">In nur vier Schritten von Ihrem Grundriss zum fertigen Ergebnis – schnell, transparent und zuverlässig.</p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ablaufSchritte.map((s, i) => (
@@ -93,7 +107,7 @@ const BgfAssistent = () => (
               </div>
               <div>
                 <h2 className="text-2xl font-bold">Jetzt Grundriss einreichen</h2>
-                <p className="text-sm text-muted-foreground">Laden Sie Ihre Datei(en) hoch – ich melde mich mit einem persönlichen Angebot</p>
+                <p className="text-sm text-muted-foreground">Wählen Sie Ihre Services, laden Sie Dateien hoch und bezahlen Sie sicher über Stripe.</p>
               </div>
             </div>
             <div className="rounded-xl border bg-card p-6 shadow-sm lg:p-8">
