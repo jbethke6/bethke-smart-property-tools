@@ -10,7 +10,7 @@ const navItems = [
   {
     label: "Smart Tools",
     children: [
-      { label: "BGF-Held", href: "/bgf-held" },
+      { label: "Grundrissheld", href: "/grundrissheld" },
       { label: "Förder-Held", href: "/foerder-held" },
       { label: "Individuelle Tools", href: "/individuelle-tools" },
     ],
@@ -23,7 +23,7 @@ const navItems = [
       { label: "Immobilien-Website", href: "/immobilien-website" },
     ],
   },
-  { label: "Smart Tools testen", href: "/bgf-held" },
+  { label: "Smart Tools testen", href: "/grundrissheld" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
