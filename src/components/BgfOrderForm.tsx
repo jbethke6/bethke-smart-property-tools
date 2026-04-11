@@ -28,9 +28,9 @@ export function BgfOrderForm() {
 
   const totalFloors = files.reduce((sum, f) => sum + f.pages, 0);
   const bgfPrice = serviceBgf ? calculateBgfPrice(totalFloors) : 0;
-  const digPrice = serviceDig ? calculateDigPrice(totalFloors) : 0;
+  const digPrice = serviceDigitalisierung ? calculateDigPrice(totalFloors) : 0;
   const totalPrice = bgfPrice + digPrice;
-  const anyServiceSelected = serviceBgf || serviceDig;
+  const anyServiceSelected = serviceBgf || serviceDigitalisierung;
 
   const addFiles = useCallback(async (newFiles: File[]) => {
     setCounting(true);
@@ -100,6 +100,8 @@ export function BgfOrderForm() {
         floors: totalFloors,
         price_cents: totalPrice,
         file_paths: uploadedPaths,
+        service_bgf: serviceBgf,
+        service_digitalisierung: serviceDigitalisierung,
         status: "pending",
       });
       if (dbError) throw new Error(`Bestellung speichern fehlgeschlagen: ${dbError.message}`);
@@ -114,7 +116,7 @@ export function BgfOrderForm() {
           email,
           floors: totalFloors,
           service_bgf: serviceBgf,
-          service_digitalisierung: serviceDig,
+          service_digitalisierung: serviceDigitalisierung,
           price_ids: STRIPE_PRICE_IDS,
           file_paths: uploadedPaths,
           return_url: window.location.origin + "/grundrissheld?status=success",
@@ -171,7 +173,7 @@ export function BgfOrderForm() {
             </div>
           </label>
           <label className="flex cursor-pointer items-start gap-3 rounded-lg border p-4 transition-colors hover:bg-accent/30 has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-primary/5">
-            <Checkbox checked={serviceDig} onCheckedChange={(v) => setServiceDig(!!v)} className="mt-0.5" />
+            <Checkbox checked={serviceDigitalisierung} onCheckedChange={(v) => setServiceDigitalisierung(!!v)} className="mt-0.5" />
             <div>
               <p className="font-semibold">CAD-Digitalisierung</p>
               <p className="text-sm text-muted-foreground">
@@ -249,7 +251,7 @@ export function BgfOrderForm() {
               <span className="font-semibold">{formatPrice(bgfPrice)}</span>
             </div>
           )}
-          {serviceDig && (
+          {serviceDigitalisierung && (
             <div className="flex items-center justify-between text-sm">
               <span>
                 CAD-Digitalisierung: 59,00 €{totalFloors > 1 ? ` + ${totalFloors - 1} × 40,00 €` : ""}
@@ -257,13 +259,13 @@ export function BgfOrderForm() {
               <span className="font-semibold">{formatPrice(digPrice)}</span>
             </div>
           )}
-          {serviceBgf && serviceDig && (
+          {serviceBgf && serviceDigitalisierung && (
             <div className="border-t pt-2 flex items-center justify-between">
               <span className="font-semibold">Gesamt</span>
               <span className="text-2xl font-bold text-primary">{formatPrice(totalPrice)}</span>
             </div>
           )}
-          {!(serviceBgf && serviceDig) && (
+          {!(serviceBgf && serviceDigitalisierung) && (
             <div className="flex items-center justify-end">
               <span className="text-2xl font-bold text-primary">{formatPrice(totalPrice)}</span>
             </div>
