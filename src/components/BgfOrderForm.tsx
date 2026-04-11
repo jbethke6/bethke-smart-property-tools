@@ -92,19 +92,6 @@ export function BgfOrderForm() {
         uploadedPaths.push(path);
       }
 
-      // Save order metadata
-      const { error: dbError } = await supabase.from("temp_orders").insert({
-        id: orderId,
-        customer_name: name,
-        customer_email: email,
-        floors: totalFloors,
-        price_cents: totalPrice,
-        file_paths: uploadedPaths,
-        service_bgf: serviceBgf,
-        service_digitalisierung: serviceDigitalisierung,
-        status: "pending",
-      });
-      if (dbError) throw new Error(`Bestellung speichern fehlgeschlagen: ${dbError.message}`);
 
       // Call n8n webhook
       const res = await fetch(N8N_WEBHOOK_URL, {
