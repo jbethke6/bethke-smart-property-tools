@@ -24,7 +24,7 @@ export function BgfOrderForm() {
   const [loading, setLoading] = useState(false);
   const [counting, setCounting] = useState(false);
   const [serviceBgf, setServiceBgf] = useState(false);
-  const [serviceDig, setServiceDig] = useState(false);
+  const [serviceDigitalisierung, setServiceDigitalisierung] = useState(false);
 
   const totalFloors = files.reduce((sum, f) => sum + f.pages, 0);
   const bgfPrice = serviceBgf ? calculateBgfPrice(totalFloors) : 0;
