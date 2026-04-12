@@ -9,7 +9,6 @@ const Impressum = () => (
           <h2 className="text-lg font-semibold text-foreground">Angaben gemäß § 5 TMG</h2>
           <p>
             SmartImmo Solutions<br />
-            Justin Bethke<br />
             Ortenberger Str. 22<br />
             63674 Altenstadt
           </p>
@@ -17,7 +16,7 @@ const Impressum = () => (
         <section>
           <h2 className="text-lg font-semibold text-foreground">Kontakt</h2>
           <p>
-            E-Mail: bethke@smartimmo.solutions<br />
+            E-Mail: info@smartimmo.solutions<br />
             Website: www.smartimmo.solutions
           </p>
         </section>
@@ -28,7 +27,7 @@ const Impressum = () => (
         <section>
           <h2 className="text-lg font-semibold text-foreground">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
           <p>
-            Justin Bethke<br />
+            SmartImmo Solutions<br />
             Ortenberger Str. 22<br />
             63674 Altenstadt
           </p>
