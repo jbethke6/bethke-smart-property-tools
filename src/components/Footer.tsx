@@ -15,30 +15,37 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="mb-3 text-sm font-semibold">Smart Tools</h4>
+            <h4 className="mb-3 text-sm font-semibold">Services</h4>
             <div className="space-y-2">
               <Link to="/grundrissheld" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Grundrissheld</Link>
               <Link to="/foerder-held" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Förder-Held</Link>
-              <Link to="/individuelle-tools" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Individuelle Tools</Link>
-            </div>
-          </div>
-          <div>
-            <h4 className="mb-3 text-sm font-semibold">Services</h4>
-            <div className="space-y-2">
               <Link to="/grundriss-service" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Grundriss & BGF</Link>
               <Link to="/3d-tour" className="block text-sm text-muted-foreground hover:text-primary transition-colors">3D-360°-Tour</Link>
               <Link to="/immobilien-website" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Immobilien-Website</Link>
             </div>
           </div>
-        </div>
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t pt-6 sm:flex-row">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} SmartImmo Solutions – Justin Bethke
-          </p>
-          <div className="flex gap-4">
-            <Link to="/impressum" className="text-xs text-muted-foreground hover:text-primary transition-colors">Impressum</Link>
-            <Link to="/datenschutz" className="text-xs text-muted-foreground hover:text-primary transition-colors">Datenschutz</Link>
+          <div className="space-y-6">
+            <div>
+              <h4 className="mb-3 text-sm font-semibold">Rechtliches</h4>
+              <div className="space-y-2">
+                <Link to="/impressum" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Impressum</Link>
+                <Link to="/datenschutz" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Datenschutz</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="mb-3 text-sm font-semibold">Kontakt</h4>
+              <div className="space-y-1 text-sm text-muted-foreground">
+                <p>info@smartimmo.solutions</p>
+                <p>Ortenberger Str. 22</p>
+                <p>63674 Altenstadt</p>
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="mt-10 flex items-center justify-center border-t pt-6">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} SmartImmo Solutions. Alle Rechte vorbehalten.
+          </p>
         </div>
       </div>
     </footer>
