@@ -196,7 +196,7 @@ export function BgfOrderForm() {
           <input
             id="bgf-file-input"
             type="file"
-            accept="image/jpeg,image/png,image/webp,.pdf"
+            accept="image/jpeg,image/png,image/webp,application/pdf"
             multiple
             onChange={onFileSelect}
             className="hidden"

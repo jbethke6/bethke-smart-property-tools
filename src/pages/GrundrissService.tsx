@@ -7,7 +7,7 @@ const GrundrissService = () => (
     <DetailPageHero
       title="Grundriss & BGF"
       subtitle="Immobilien-Service"
-      description="Professionelle, CAD-genaue Grundrisse für Ihre Immobilie – ob für Exposés, Energieausweise oder Baugenehmigungen. Auf Wunsch komme ich direkt vor Ort, vermesse Ihre Räume und erstelle einen maßstabsgetreuen Grundriss inklusive BGF-Berechnung nach DIN 277. Sie erhalten die fertigen Pläne als PDF und optional als DXF-Datei für die Weiterverarbeitung."
+      description="Professionelle, CAD-genaue Grundrisse für Ihre Immobilie – ob für Exposés, Energieausweise oder Baugenehmigungen. Auf Wunsch kommen wir direkt vor Ort, vermessen Ihre Räume und erstellen einen maßstabsgetreuen Grundriss inklusive BGF-Berechnung nach DIN 277. Sie erhalten die fertigen Pläne als PDF und optional als DXF-Datei für die Weiterverarbeitung."
       image={grundrissHero}
       benefits={[
         "Professionelle CAD-Grundrisse – maßstabsgetreu und detailliert",
