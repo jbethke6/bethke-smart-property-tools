@@ -7,7 +7,7 @@ const Tour3D = () => (
     <DetailPageHero
       title="3D-360°-Tour"
       subtitle="Immobilien-Service"
-      description="Ermöglichen Sie Ihren Interessenten eine immersive Online-Besichtigung – jederzeit und von überall. Mit der Ricoh Theta X erstelle ich hochauflösende 360°-Aufnahmen Ihrer Immobilie. Die fertige Tour wird professionell auf Panoee gehostet und lässt sich nahtlos in Exposés, Immobilienportale und Ihre eigene Website einbetten. Perfekt für Makler, Bauträger und Hausverwaltungen."
+      description="Ermöglichen Sie Ihren Interessenten eine immersive Online-Besichtigung – jederzeit und von überall. Mit der Ricoh Theta X erstellen wir hochauflösende 360°-Aufnahmen Ihrer Immobilie. Die fertige Tour wird professionell auf Panoee gehostet und lässt sich nahtlos in Exposés, Immobilienportale und Ihre eigene Website einbetten. Perfekt für Makler, Bauträger und Hausverwaltungen."
       image={tourImage}
       benefits={[
         "Professionelle 360°-Aufnahmen vor Ort mit der Ricoh Theta X",

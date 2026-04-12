@@ -138,7 +138,7 @@ const Index = () => {
           >
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Portfolio</p>
             <h2 className="mb-4 text-3xl font-bold">Referenzen</h2>
-            <p className="mx-auto max-w-xl text-muted-foreground">Ausgewählte Beispiele meiner Arbeit – weitere Projekte und Grundriss-Referenzen werden laufend ergänzt.</p>
+            <p className="mx-auto max-w-xl text-muted-foreground">Ausgewählte Beispiele unserer Arbeit – weitere Projekte und Grundriss-Referenzen werden laufend ergänzt.</p>
           </motion.div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Grundriss Placeholder */}

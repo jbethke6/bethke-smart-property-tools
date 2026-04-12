@@ -41,7 +41,7 @@ export function ContactForm() {
     setLoading(false);
     toast({
       title: "Nachricht gesendet!",
-      description: "Vielen Dank, ich melde mich innerhalb von 24 Stunden.",
+      description: "Vielen Dank, wir melden uns innerhalb von 24 Stunden.",
     });
   };
 
@@ -51,7 +51,7 @@ export function ContactForm() {
         <div className="mb-4 text-4xl">✅</div>
         <h3 className="mb-2 text-xl font-semibold">Vielen Dank!</h3>
         <p className="text-muted-foreground">
-          Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich innerhalb von 24 Stunden bei Ihnen.
+          Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
         </p>
       </div>
     );

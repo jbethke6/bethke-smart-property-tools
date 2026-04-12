@@ -7,7 +7,7 @@ const IndividuelleTools = () => (
     <DetailPageHero
       title="Individuelle Tools"
       subtitle="Maßgeschneidert für Sie"
-      description="Sie haben einen wiederkehrenden manuellen Prozess, der Sie Zeit und Nerven kostet? Ich entwickle für Sie maßgeschneiderte Automatisierungen und digitale Werkzeuge – von n8n-Workflows über individuelle React-Frontends bis hin zu kompletten Datenbank-Lösungen mit Supabase. Ob automatische Rechnungserstellung, CRM-Schnittstellen oder ein eigenes kleines Web-Tool für Ihre Kunden: Gemeinsam finden wir die passende Lösung."
+      description="Sie haben einen wiederkehrenden manuellen Prozess, der Sie Zeit und Nerven kostet? Wir entwickeln für Sie maßgeschneiderte Automatisierungen und digitale Werkzeuge – von n8n-Workflows über individuelle React-Frontends bis hin zu kompletten Datenbank-Lösungen mit Supabase. Ob automatische Rechnungserstellung, CRM-Schnittstellen oder ein eigenes kleines Web-Tool für Ihre Kunden: Gemeinsam finden wir die passende Lösung."
       image={individuelleHero}
       benefits={[
         "Automatisierte Workflows (z.B. Rechnungen aus Excel generieren)",

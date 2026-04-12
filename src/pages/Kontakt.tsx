@@ -13,9 +13,9 @@ const Kontakt = () => (
           className="mb-12 text-center"
         >
           <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">Kontakt</p>
-          <h1 className="mb-4 text-3xl font-bold md:text-4xl">Sprechen Sie mich an</h1>
+          <h1 className="mb-4 text-3xl font-bold md:text-4xl">Sprechen Sie uns an</h1>
           <p className="mx-auto max-w-xl text-muted-foreground">
-            Beschreiben Sie kurz Ihr Projekt – ich melde mich innerhalb von 24 Stunden mit einem unverbindlichen Angebot.
+            Beschreiben Sie kurz Ihr Projekt – wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Angebot.
           </p>
         </motion.div>
 
@@ -40,7 +40,7 @@ const Kontakt = () => (
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span>info@smartimmo.solutions</span>
+                  <span>bethke@smartimmo.solutions</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4 text-primary" />
@@ -51,7 +51,7 @@ const Kontakt = () => (
             <div className="rounded-xl border bg-accent/50 p-6">
               <h3 className="mb-2 font-semibold">Schnelle Antwort</h3>
               <p className="text-sm text-muted-foreground">
-                Ich melde mich in der Regel innerhalb von 24 Stunden. Bei dringenden Anfragen nutzen Sie bitte die Telefonnummer.
+                Wir melden uns in der Regel innerhalb von 24 Stunden. Bei dringenden Anfragen nutzen Sie bitte die Telefonnummer.
               </p>
             </div>
           </motion.div>
