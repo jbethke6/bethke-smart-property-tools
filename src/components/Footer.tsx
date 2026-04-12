@@ -33,7 +33,7 @@ export function Footer() {
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t pt-6 sm:flex-row">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Justin Bethke – Bethke Smart Immo Services
+            © {new Date().getFullYear()} SmartImmo Solutions – Justin Bethke
           </p>
           <div className="flex gap-4">
             <Link to="/impressum" className="text-xs text-muted-foreground hover:text-primary transition-colors">Impressum</Link>
