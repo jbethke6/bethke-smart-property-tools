@@ -2,7 +2,10 @@ import * as pdfjsLib from "pdfjs-dist";
 import { BGF_PRICING, DIG_PRICING } from "@/lib/config";
 
 // Use CDN worker for pdf.js
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
 
 export interface FileWithPages {
   file: File;
