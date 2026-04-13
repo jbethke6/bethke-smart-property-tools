@@ -61,19 +61,18 @@ export function Navbar() {
                         key={child.href}
                         to={child.href}
                         className={cn(
-                          "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
+                          "flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
                           location.pathname === child.href
                             ? "bg-accent text-accent-foreground font-medium"
                             : "text-muted-foreground"
                         )}
-                        <span className="flex items-center gap-2">
-                          {child.label}
-                          {child.badge && (
-                            <Badge variant="default" className="text-[10px] px-1.5 py-0 leading-4">
-                              {child.badge}
-                            </Badge>
-                          )}
-                        </span>
+                      >
+                        {child.label}
+                        {child.badge && (
+                          <Badge variant="default" className="text-[10px] px-1.5 py-0 leading-4">
+                            {child.badge}
+                          </Badge>
+                        )}
                       </Link>
                     ))}
                   </div>
