@@ -65,9 +65,15 @@ export function Navbar() {
                           location.pathname === child.href
                             ? "bg-accent text-accent-foreground font-medium"
                             : "text-muted-foreground"
-                        )}
                       >
-                        {child.label}
+                        <span className="flex items-center gap-2">
+                          {child.label}
+                          {child.badge && (
+                            <Badge variant="default" className="text-[10px] px-1.5 py-0 leading-4">
+                              {child.badge}
+                            </Badge>
+                          )}
+                        </span>
                       </Link>
                     ))}
                   </div>
@@ -114,9 +120,14 @@ export function Navbar() {
                       key={child.href}
                       to={child.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                      className="flex items-center gap-2 rounded-md px-6 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       {child.label}
+                      {child.badge && (
+                        <Badge variant="default" className="text-[10px] px-1.5 py-0 leading-4">
+                          {child.badge}
+                        </Badge>
+                      )}
                     </Link>
                   ))}
                 </div>
