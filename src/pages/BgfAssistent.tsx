@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { Calculator, CheckCircle2, ArrowRight, PenTool } from "lucide-react";
 import { BgfOrderForm } from "@/components/BgfOrderForm";
 import bgfHero from "@/assets/bgf-hero.jpg";
+import detailImg1 from "@/assets/grundriss-detail-1.jpg";
+import detailImg2 from "@/assets/grundriss-detail-2.jpg";
+import detailImg3 from "@/assets/grundriss-detail-3.jpg";
 
 const ablaufSchritte = [
   { step: "1", title: "Grundriss hochladen", description: "Laden Sie Ihren Grundriss als Bild oder PDF über das Formular hoch. Auch mehrere Dateien gleichzeitig sind möglich." },
@@ -23,7 +26,7 @@ const BgfAssistent = () => (
             </span>
             <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Grundrissheld</h1>
             <p className="mb-6 text-lg text-muted-foreground leading-relaxed">
-              Zwei leistungsstarke Services rund um Ihren Grundriss – einzeln oder kombiniert buchbar. Laden Sie einfach Ihre Grundrisse hoch, wählen Sie die gewünschten Leistungen und erhalten Sie professionelle Ergebnisse per E-Mail.
+              Zwei leistungsstarke Services rund um Ihren Grundriss – einzeln oder kombiniert buchbar. Unser KI-gestütztes System lernt mit jedem Auftrag dazu und wird kontinuierlich präziser.
             </p>
             <div className="grid gap-4 sm:grid-cols-2 mb-6">
               <div className="rounded-xl border bg-card p-4">
@@ -31,7 +34,7 @@ const BgfAssistent = () => (
                   <Calculator className="h-5 w-5 text-primary" />
                   <h3 className="font-semibold">BGF-Berechnung</h3>
                 </div>
-                <p className="text-sm text-muted-foreground mb-2">Bruttogrundfläche nach DIN 277 – automatisch berechnet und manuell geprüft.</p>
+                <p className="text-sm text-muted-foreground mb-2">Unser KI-gestütztes System analysiert Ihre Grundrisse und berechnet die Brutto-Grundfläche nach DIN 277. Jede Berechnung wird von uns geprüft und verbessert das Modell für zukünftige Aufträge.</p>
                 <p className="text-sm font-semibold text-primary">ab 29,00 € / Etage</p>
               </div>
               <div className="rounded-xl border bg-card p-4">
@@ -39,13 +42,13 @@ const BgfAssistent = () => (
                   <PenTool className="h-5 w-5 text-primary" />
                   <h3 className="font-semibold">CAD-Digitalisierung</h3>
                 </div>
-                <p className="text-sm text-muted-foreground mb-2">Professionelle Nachzeichnung Ihres Grundrisses als maßstabsgetreue CAD-Datei.</p>
+                <p className="text-sm text-muted-foreground mb-2">Wir digitalisieren Ihre handgezeichneten oder eingescannten Grundrisse in präzise CAD-Dateien. KI-Vorverarbeitung beschleunigt den Prozess, unsere Experten garantieren die Qualität.</p>
                 <p className="text-sm font-semibold text-primary">ab 59,00 € / Etage</p>
               </div>
             </div>
             <div className="space-y-3">
               {[
-                "Schnelle, präzise Berechnung nach DIN 277",
+                "KI-gestützte Berechnung nach DIN 277 – mit jedem Auftrag präziser",
                 "Persönliche Nachkontrolle durch Fachpersonal",
                 "Ideal für Makler, Energieberater & Hausverwaltungen",
                 "Auch für komplexe Mehrgeschoss-Grundrisse geeignet",
@@ -60,6 +63,32 @@ const BgfAssistent = () => (
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
             <img src={bgfHero} alt="BGF-Berechnung am Schreibtisch mit Grundriss und Tablet" className="rounded-xl shadow-lg" width={1280} height={720} />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
+    {/* Detail Images */}
+    <section className="py-12 lg:py-16">
+      <div className="container">
+        <div className="grid gap-6 sm:grid-cols-3">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="overflow-hidden rounded-xl border bg-card shadow-sm">
+            <img src={detailImg1} alt="Grundriss auf Schreibtisch" className="h-40 w-full object-cover" loading="lazy" width={768} height={512} />
+            <div className="p-4">
+              <p className="text-sm text-muted-foreground">Professionelle Grundrissanalyse – von der Papiervorlage zum digitalen Ergebnis.</p>
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="overflow-hidden rounded-xl border bg-card shadow-sm">
+            <img src={detailImg2} alt="CAD-Digitalisierung am Monitor" className="h-40 w-full object-cover" loading="lazy" width={768} height={512} />
+            <div className="p-4">
+              <p className="text-sm text-muted-foreground">Präzise CAD-Digitalisierung – maßstabsgetreu und sofort weiterverarbeitbar.</p>
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="overflow-hidden rounded-xl border bg-card shadow-sm">
+            <img src={detailImg3} alt="KI-Analyse von Gebäudedaten" className="h-40 w-full object-cover" loading="lazy" width={768} height={512} />
+            <div className="p-4">
+              <p className="text-sm text-muted-foreground">KI-gestützte Analyse – unser System wird mit jedem Auftrag besser.</p>
+            </div>
           </motion.div>
         </div>
       </div>
