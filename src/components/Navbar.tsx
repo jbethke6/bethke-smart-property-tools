@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 import logo from "@/assets/7c8eae15-1470-48a0-8ceb-1ddf732aef62.png";
 
 
@@ -11,7 +12,7 @@ const navItems = [
     label: "Smart Tools",
     children: [
       { label: "Grundrissheld", href: "/grundrissheld" },
-      { label: "Förder-Held", href: "/foerder-held" },
+      { label: "Förder-Held", href: "/foerder-held", badge: "Bald verfügbar" },
       { label: "Individuelle Tools", href: "/individuelle-tools" },
     ],
   },
@@ -60,13 +61,18 @@ export function Navbar() {
                         key={child.href}
                         to={child.href}
                         className={cn(
-                          "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
+                          "flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
                           location.pathname === child.href
                             ? "bg-accent text-accent-foreground font-medium"
                             : "text-muted-foreground"
                         )}
                       >
                         {child.label}
+                        {child.badge && (
+                          <Badge variant="default" className="text-[10px] px-1.5 py-0 leading-4">
+                            {child.badge}
+                          </Badge>
+                        )}
                       </Link>
                     ))}
                   </div>
@@ -113,9 +119,14 @@ export function Navbar() {
                       key={child.href}
                       to={child.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                      className="flex items-center gap-2 rounded-md px-6 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       {child.label}
+                      {child.badge && (
+                        <Badge variant="default" className="text-[10px] px-1.5 py-0 leading-4">
+                          {child.badge}
+                        </Badge>
+                      )}
                     </Link>
                   ))}
                 </div>
