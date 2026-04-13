@@ -32,10 +32,10 @@ const Index = () => {
               Digitale Immobilienlösungen aus einer Hand
             </motion.div>
             <h1 className="mb-5 text-4xl font-extrabold tracking-tight text-[hsl(0,0%,100%)] md:text-5xl lg:text-6xl">
-              Smarte Tools <span className="text-primary">&</span> professionelle Immobilien-Services
+              Intelligente Immobilien-Tools <span className="text-primary">–</span> automatisiert, präzise, lernend
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[hsl(0,0%,82%)] md:text-xl">
-              BGF-Berechnung, Förder-Check, CAD-Grundrisse, 3D-360°-Touren, individuelle Websites und maßgeschneiderte Automatisierungen – alles aus einer Hand für die Immobilienbranche.
+              Wir setzen auf KI-basierte Systeme, die mit jedem Auftrag präziser werden. Unsere Tools automatisieren wiederkehrende Aufgaben, lernen kontinuierlich aus realen Projektdaten und entwickeln sich bis zur vollständigen Automatisierung weiter – ohne menschliche Korrektur.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Button asChild size="lg" className="text-base px-8">
@@ -61,26 +61,26 @@ const Index = () => {
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Das Herzstück</p>
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Smart Tools</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Intelligente, digitale Werkzeuge, die Immobilienprofis im Alltag Zeit und Nerven sparen. Automatisiert, zuverlässig und persönlich geprüft.
+              Unsere KI-gestützten Werkzeuge lernen mit jedem Auftrag dazu. Jede Berechnung, jede Digitalisierung fließt als Trainingsdaten in unser Modell ein – mit dem Ziel, wiederkehrende Aufgaben vollständig zu automatisieren und menschliche Nachkontrolle überflüssig zu machen.
             </p>
           </motion.div>
           <div className="grid gap-6 md:grid-cols-3">
             <ServiceCard
               icon={Calculator}
               title="Grundrissheld"
-              description="BGF-Berechnung nach DIN 277 und CAD-Digitalisierung aus Grundriss-Bildern – mit persönlicher Endprüfung für höchste Genauigkeit. Ergebnis als professionelles PDF."
+              description="KI-gestützte BGF-Berechnung nach DIN 277 und CAD-Digitalisierung aus Grundriss-Bildern. Jeder Auftrag verbessert unser Modell – mit persönlicher Endprüfung für höchste Genauigkeit. Ergebnis als professionelles PDF."
               href="/grundrissheld"
             />
             <ServiceCard
               icon={Search}
               title="Förder-Held"
-              description="Automatische Auswertung aller passenden Förderprogramme von KfW, BAFA, Landesbanken und Kommunen. Übersichtliche Zusammenfassung mit Förderhöhe und Antragslinks."
+              description="Automatische Auswertung aller passenden Förderprogramme von KfW, BAFA, Landesbanken und Kommunen. Unser System lernt mit jeder Abfrage dazu und liefert immer präzisere Ergebnisse mit Förderhöhe und Antragslinks."
               href="/foerder-held"
             />
             <ServiceCard
               icon={Wrench}
               title="Individuelle Tools für Sie"
-              description="Maßgeschneiderte Automatisierungen für Ihre Prozesse – von n8n-Workflows über React-Frontends bis hin zu kompletten Datenbank- und API-Lösungen."
+              description="Maßgeschneiderte Automatisierungen für Ihre Prozesse – von n8n-Workflows über React-Frontends bis hin zu kompletten Datenbank- und API-Lösungen. Wir entwickeln Tools, die mit Ihren Daten lernen und immer besser werden."
               href="/individuelle-tools"
               buttonText="Beratung anfragen"
               variant="accent"
@@ -101,7 +101,7 @@ const Index = () => {
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Alles aus einer Hand</p>
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Immobilien-Services</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Professionelle Dienstleistungen rund um die Immobilienvermarktung – von der Vermessung über die 3D-Tour bis zur fertigen Website.
+              Professionelle Dienstleistungen rund um die Immobilienvermarktung – von der Vermessung über die 3D-Tour bis zur fertigen Website. Wir begleiten Sie von der ersten Idee bis zum fertigen Ergebnis.
             </p>
           </motion.div>
           <div className="grid gap-6 md:grid-cols-3">

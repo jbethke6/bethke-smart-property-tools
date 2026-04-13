@@ -90,6 +90,10 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      linear-gradient(to bottom, hsl(210 14% 97%) 0%, hsl(0 0% 100%) 50%, hsl(210 14% 97%) 100%),
+      radial-gradient(circle at 20% 50%, hsl(199 56% 95% / 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(210 14% 95% / 0.3) 0%, transparent 50%);
   }
 
   h1, h2, h3, h4, h5, h6 {
