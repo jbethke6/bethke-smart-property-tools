@@ -12,7 +12,7 @@ const navItems = [
     label: "Smart Tools",
     children: [
       { label: "Grundrissheld", href: "/grundrissheld" },
-      { label: "Förder-Held", href: "/foerder-held" },
+      { label: "Förder-Held", href: "/foerder-held", badge: "Bald verfügbar" },
       { label: "Individuelle Tools", href: "/individuelle-tools" },
     ],
   },
