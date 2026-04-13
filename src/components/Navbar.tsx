@@ -65,7 +65,7 @@ export function Navbar() {
                           location.pathname === child.href
                             ? "bg-accent text-accent-foreground font-medium"
                             : "text-muted-foreground"
-                      >
+                        )}
                         <span className="flex items-center gap-2">
                           {child.label}
                           {child.badge && (
