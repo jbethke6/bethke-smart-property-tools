@@ -90,10 +90,22 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    background-color: hsl(210 14% 98%);
     background-image:
-      linear-gradient(to bottom, hsl(210 14% 97%) 0%, hsl(0 0% 100%) 50%, hsl(210 14% 97%) 100%),
-      radial-gradient(circle at 20% 50%, hsl(199 56% 95% / 0.4) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(210 14% 95% / 0.3) 0%, transparent 50%);
+      /* Subtle floor-plan grid pattern */
+      linear-gradient(to right, hsl(210 14% 91% / 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(210 14% 91% / 0.18) 1px, transparent 1px),
+      /* Larger room-like divisions */
+      linear-gradient(to right, hsl(210 14% 88% / 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(210 14% 88% / 0.12) 1px, transparent 1px),
+      /* Soft radial fade so pattern is strongest in center */
+      radial-gradient(ellipse at 50% 50%, transparent 40%, hsl(210 14% 98%) 80%);
+    background-size:
+      24px 24px,
+      24px 24px,
+      120px 96px,
+      120px 96px,
+      100% 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
